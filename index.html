@@ -41,7 +41,7 @@ div{
   <div class="text">I Love You</div>
 </div>
 <script>
-function createPoint(x,y,c){
+function createPoint(x,y){
   var div = document.createElement("div");
   div.className = "item";
   div.style.left = x + "px";
@@ -60,7 +60,7 @@ function heartShape(r,dx,dy){//r:大小;dx:水平偏移;dy:垂直偏移;c:颜色
     n = -r * (((Math.sin(i) * Math.sqrt(Math.abs(Math.cos(i)))) / (Math.sin(i) + 1.4)) - 2 * Math.sin(i) + 2);
     x = n * Math.cos(m) + dx;
     y = n * Math.sin(m) + dy;
-    createPoint(x,y,c);
+    createPoint(x,y);
     i += 0.04;
   }, 10);
   // for(i = 0; i <= 200; i += 0.04){
