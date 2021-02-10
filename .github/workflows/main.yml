@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -29,7 +29,6 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_HEXO }}
           BASE_BRANCH: master
-          BRANCH: master
+          BRANCH: hexo-page
           FOLDER: public
           BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
-
