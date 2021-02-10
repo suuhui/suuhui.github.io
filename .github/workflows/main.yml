@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ develop ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,7 +28,12 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@master
         env:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_HEXO }}
-          BASE_BRANCH: master
-          BRANCH: hexo-page
+          BASE_BRANCH: develop
+          BRANCH: master
           FOLDER: public
           BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
+        run: |
+          npm install -g hexo-cli
+          hexo clean
+          hexo g
+          hexo d
