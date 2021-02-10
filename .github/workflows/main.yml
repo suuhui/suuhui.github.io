@@ -24,14 +24,14 @@ jobs:
       - uses: actions/checkout@master
 
       # Runs a single command using the runners shell
-      - name: Build and deploy
+      - name: Build
         uses: JamesIves/github-pages-deploy-action@master
         env:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_HEXO }}
           BASE_BRANCH: develop
           BRANCH: master
           FOLDER: public
-          BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
+      - name: Deploy
         run: |
           npm install -g hexo-cli
           hexo clean
