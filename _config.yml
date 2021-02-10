@@ -103,9 +103,6 @@ theme: purer
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
-
-deploy:
   type: git
   repo: https://github.com/suuhui/suuhui.github.io.git
   branch: master
