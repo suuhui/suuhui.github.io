@@ -79,6 +79,13 @@ module.exports = class extends Component {
                             }}></span> : null}
                         </div>
                     </div> : null}
+                    {/* Tags */}
+                    {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
+                        <span class="mr-2">#</span>
+                        {page.tags.map(tag => {
+                            return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
+                        })}
+                    </div> : null}
                     {/* Title */}
                     <h1 class="title is-3 is-size-4-mobile">
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
@@ -88,13 +95,6 @@ module.exports = class extends Component {
                     {/* Licensing block */}
                     {!index && article && article.licenses && Object.keys(article.licenses)
                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
-                    {/* Tags */}
-                    {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
-                        <span class="mr-2">#</span>
-                        {page.tags.map(tag => {
-                            return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
-                        })}
-                    </div> : null}
                     {/* "Read more" button */}
                     {index && page.excerpt ? <a class="article-more button is-small is-size-7" href={`${url_for(page.link || page.path)}#more`}>{__('article.more')}</a> : null}
                     {/* Share button */}
