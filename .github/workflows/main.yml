@@ -29,6 +29,6 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_HEXO }}
           BASE_BRANCH: develop
-          BRANCH: master
+          BRANCH: hexo-page
           FOLDER: public
           BUILD_SCRIPT: npm i -g hexo-cli && npm install && hexo clean && hexo generate && hexo d
