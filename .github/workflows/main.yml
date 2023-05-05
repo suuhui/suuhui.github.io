@@ -33,4 +33,4 @@ jobs:
           BASE_BRANCH: develop
           BRANCH: hexo-page
           FOLDER: public
-          BUILD_SCRIPT: npm i -g hexo-cli && npm install && hexo clean && hexo generate && hexo d
+          BUILD_SCRIPT: npm i -g hexo-cli && npm install && hexo clean && hexo generate && hexo server
