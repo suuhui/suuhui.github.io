@@ -1,0 +1,9 @@
+[submodule "themes/themes/purer"]
+	path = themes/themes/purer
+	url = https://github.com/fengkx/hexo-theme-purer.git
+[submodule "themes/purer"]
+	path = themes/purer
+	url = https://github.com/fengkx/hexo-theme-purer.git
+[submodule "themes/icarus"]
+	path = themes/icarus
+	url = https://github.com/ppoffice/hexo-theme-icarus.git
