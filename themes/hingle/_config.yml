@@ -1,0 +1,17 @@
+author: 'suuhui' # 作者名称
+author_avatar: '/images/icon.png' # 作者头像
+author_text: 'suuhui' # 作者信息
+social: # 社交链接
+  - title: 'Github'
+    icon: 'github'
+    link: 'https://github.com/suuhui'
+  - title: '首页'
+    icon: 'home'
+    link: 'https://suuhui.github.io'
+# background: 'https://api.paugram.com/wallpaper?source=gh' # 主题背景
+#menu: # 页眉菜单项目
+ # '关于我': /about
+ # '朋友们': /friends
+config:
+  copyright: true # 复制的时候弹出保留原站链接说明
+  night: true # 自动切换夜间模式

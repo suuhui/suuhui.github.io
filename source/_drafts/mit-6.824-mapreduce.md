@@ -1,6 +1,6 @@
 ## MapReduce论文
 
-![Execution overview](/source/images/mapreduce-execution.jpeg)
+![Execution overview](/images/mapreduce-execution.jpeg)
 
 Map调用通过自动将输入拆分为M组运行在不同的机器上。输入拆分可以并行运行在不同的机器上。Reduce调用通过一个分区函数将中间键拆分为R块实现分布式。分区函数和分块数R都由用户指定。MapReduce执行流程如下描述：
 1. MapReduce库将输入划分成典型的16或64MB（用户通过可选参数控制），然后在一组机器上启动MapReduce进程

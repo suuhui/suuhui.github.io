@@ -2,6 +2,7 @@
 title: 日常使用的git命令
 date: 2021-02-26 17:33:48
 tags: git
+categories: git
 ---
 
 ## git使用三部曲
@@ -159,3 +160,12 @@ tags: git
 ```
 >  git diff --name-only --diff-filter=U
 ```
+
+## 清理工作区
+
+git clean用于清理工作区，各个参数说明如下
+ 
+- -n：列出要删除的文件
+- -d：删除未被添加到git路径中的文件和文件夹，将.gitignore标记的文件全部删除
+- -x：删除未被track的文件，无论是否被.gitignore标记
+- -f：强制删除没有被track的文件，但不删除.gitignore标记的文件

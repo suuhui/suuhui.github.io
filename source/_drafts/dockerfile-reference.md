@@ -1,6 +1,7 @@
 ---
 title: dockerfile-reference
 tags: docker
+categories: docker
 ---
 
 Docker可以通过读取`dockerfile`中的指令自动构建镜像。`dockerfile`是一个文本文档，其中包含了所有用户可以在命令行调用用于构建镜像的指令。用户可以使用`docker build`创建一个可以连续执行多个命令的自动化构建。
